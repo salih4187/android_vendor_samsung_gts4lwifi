@@ -329,6 +329,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/etc/init/vendor.trustonic.tee@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.trustonic.tee@1.0-service.rc \
     vendor/samsung/gts4lwifi/proprietary/vendor/etc/init/vendor.trustonic.teeregistry@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.trustonic.teeregistry@1.0-service.rc \
     vendor/samsung/gts4lwifi/proprietary/vendor/etc/init/wifi_qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_qcom.rc \
+    vendor/samsung/gts4lwifi/proprietary/vendor/etc/init/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc \
     vendor/samsung/gts4lwifi/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/samsung/gts4lwifi/proprietary/vendor/etc/libnfc-mtp-NQ3XX.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp-NQ3XX.conf \
     vendor/samsung/gts4lwifi/proprietary/vendor/etc/libnfc-mtp-NQ4XX.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp-NQ4XX.conf \
@@ -882,7 +883,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libqti-perfd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-util.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libqti-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-utils.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/libqti_vndfwk_detect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti_vndfwk_detect.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libqtigef.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtigef.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtikeymaster4.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/librecordalive.so:$(TARGET_COPY_OUT_VENDOR)/lib/librecordalive.so \
@@ -958,12 +958,10 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspl.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libssc_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssc_default_listener.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/libstagefright_bufferqueue_helper_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_bufferqueue_helper_vendor.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libstagefright_omx_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_omx_vendor.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libstagefright_soft_ac4dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_ac4dec.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libstagefright_soft_ddpdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_ddpdec.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libstagefright_soft_qtiflacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_qtiflacdec.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/libstagefright_softomx_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_softomx_plugin.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libstreamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstreamparser.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libsubsystem_control.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsubsystem_control.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libsurround_3mic_proc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsurround_3mic_proc.so \
@@ -983,10 +981,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libvdis_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvdis_core.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libvdis_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvdis_interface.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/libvndfwk_detect_jni.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvndfwk_detect_jni.qti.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libvpphvx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpphvx.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libvpplibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpplibrary.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/libvpx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpx.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libvqzip.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvqzip.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libwifi-hal-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-ctrl.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/libwifi-hal-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-qcom.so \
@@ -1026,16 +1022,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.1.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.2.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.0.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.1.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.2.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.3.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.4.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.5.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.6.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.7.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.7.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.8.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.8.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.config@1.9.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.9.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.postproc@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.data.slm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.data.slm@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@1.0.so \
@@ -1046,8 +1032,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.gnss@3.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@3.0-service.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@3.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.hardware.cacert@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.cacert@1.0.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.camera.device@1.0.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.hardware.cryptfshw@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.cryptfshw@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.hardware.cvp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.cvp@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.connection@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.connection@1.1.so \
@@ -1294,7 +1278,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libqti-perfd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-perfd.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-util.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libqti-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-utils.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libqti_vndfwk_detect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti_vndfwk_detect.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libqtigef.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtigef.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libreffeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libreffeature.so \
@@ -1394,7 +1377,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libvkmanager_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvkmanager_vendor.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libvkservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvkservice.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libvndfwk_detect_jni.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvndfwk_detect_jni.qti.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libvpphvx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpphvx.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libvpplibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpplibrary.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/libwifi-hal-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-ctrl.so \
@@ -1434,7 +1416,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.cacert@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.cacert@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.device@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.cryptfshw@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.cryptfshw@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.cvp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.cvp@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.connection@1.1.so \
@@ -1442,7 +1423,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fm@1.0.so \
-    vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.fstman@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fstman@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.iop@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.iop@1.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.iop@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.iop@2.0.so \
     vendor/samsung/gts4lwifi/proprietary/vendor/lib64/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@1.0.so \
